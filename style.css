@@ -1,0 +1,284 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  box-sizing:border-box;
+}
+body{
+  height:100vh;
+  background-color: #314d63;
+
+}
+.main{
+  background-color: #ee9400;
+  height:80vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  position:fixed;
+
+}
+#header{
+  padding-left:10px;
+  padding-right:10px;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:100;
+  background-color:transparent;
+
+}
+#header-img{
+  height: 70px;
+  padding:10px;
+}
+.navbar{
+  margin: 0;
+  padding: 10px;
+  font-weight:500; 
+
+}
+.checkbtn{
+   color: #05040a;
+  font-size:30px;
+  float:right;
+  line-height:80px;
+  margin-right:40px;
+  cursor:pointer;
+  visibility:hidden;
+}
+#check{
+  display:none;
+}
+
+.nav-link{
+  padding:10px;
+  color: #05040a;
+  position:relative;
+  font-weight: 500;
+}
+
+.nav-link::before{
+  content:'';
+  position:absolute;
+  top:100%;
+  left:0;
+  width:0;
+  height:2px;
+  background:#0f0f0f;
+  transition:.4s;
+}
+
+.nav-link:hover::before{
+   width:100%;
+  color: #314d63;
+}
+
+.container{
+  margin-top:70px;
+  text-align:center;
+}
+
+
+.row{
+
+  align-content:center;
+  align-items:center;
+  text-align:center;
+  
+}
+
+.shoenike{
+  height: 320px;
+  z-index: 100;
+}
+
+#video{
+  height: 310px;
+  border: 8px solid #ee9400;
+  border-radius: 20px;
+}
+  .row-item{
+    margin: auto;
+    padding: 0;
+    height:40vh;
+    color:black;
+    font-weight: 900;
+    
+  }
+.right{
+  padding-top: 20px;
+}
+.justdoit{
+  font-size:100px;
+  font-style:bolder;
+}
+  .quickfix{
+    font-size:100px;
+  }
+@media (min-width:641px) and (max-width:990px){
+  .row{
+    display:grid;
+  }
+  .left{
+    height: 200px;
+  }
+  .right{
+    height:120px;
+    width: 300px;
+  }
+  .justdoit{
+    font-size: 50px;
+  }
+  .shoenike{
+  height: 200px;
+}
+}
+
+
+
+@media (max-width:640px){
+  #header{
+    display:inline-block;
+    align-content:start;
+    height:70px;
+    z-index:100;
+    padding: 0;
+  }
+  .checkbtn{
+    position:fixed;
+    right:0;
+    top:0;
+    padding:20px;
+    visibility:visible;
+    line-height:0px
+  }
+
+  #check:checked ~ .navbar{
+    left:0;
+  }
+  #header-img{
+  position:fixed;
+    left:0;
+    top:0;
+    padding:10px;
+    margin:10px;
+    z-index:100;
+}
+  .navbar{
+    display:grid;
+    align-items:start;
+    align-content:center; 
+    text-align:center;
+    width:100%;
+    justify-content:center;
+    background:#ea9200;
+    left:-100%;
+    transition: all .5s;
+    margin-top:70px;
+    padding:0;
+    
+  }
+
+  .container{
+    margin-top:70px;
+    padding:0;
+  }
+  .row{
+    display:grid;
+    margin:auto;
+  }
+
+  #video{
+  align-self:center;
+  height:200px;
+  width:250px;
+}
+
+.shoenike{
+  height: 130px;
+}
+  .nav-link{
+    color:black;
+  }
+
+    .left{
+    margin: auto;
+    padding: 0;
+    height: 150px;
+  }
+  .right{
+    margin: auto;
+    padding: 0;
+    height: 80px;
+  }
+.justdoit{
+  font-size:30px;
+  font-style:border;
+  align-items: center;
+  justify-content: center;
+}
+  .quickfix{
+    font-size:20px;
+  }
+}
+
+
+
+
+/* btn-nike css  */
+
+
+.button-nike {
+  background-color: #111212;
+  border: 0;
+  border-radius: 36px;
+  color: #ee9400;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif; */
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  /* margin: 50px; */
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 200;
+}
+
+.button-nike:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-nike:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-nike {
+    padding: 16px 48px;
+  }
+}
